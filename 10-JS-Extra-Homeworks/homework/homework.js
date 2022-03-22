@@ -52,6 +52,19 @@ function capToFront(s) {
   //al principio de la palabra.
   //Ejemplo: soyHENRY -> HENRYsoy
   //Escribe tu código aquí
+  var n = ''
+  var s1 = ''
+  var s2 = ''
+  for (i = 0; i < s.length; i++) {
+    n = s.charAt(i).toUpperCase()
+    if (n == s.charAt(i)) {
+      s1 = s1 + s.charAt(i)
+    }
+    else {
+      s2 = s2 + s.charAt(i)
+    }
+  }
+  return s1 + s2
 }
 
 
@@ -61,6 +74,22 @@ function asAmirror(str) {
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
+  let wordMirror = ''
+  let strMirror = ''
+  for(i = 0; i < str.length; i++) {
+    if(str[str.length - 1 - i] !== ' ') {
+      wordMirror = wordMirror + str[str.length - 1 - i]
+      if(i == str.length - 1) {
+        strMirror = wordMirror + strMirror
+      }
+    }
+    else {
+      wordMirror = ' ' + wordMirror
+      strMirror = wordMirror + strMirror
+      wordMirror = ''
+    }
+  }
+  return strMirror
 } 
 
 
@@ -101,6 +130,22 @@ function sortArray(arr) {
   //La función recibe una matriz de strings. Ordena la matriz en orden creciente de longitudes de cadena
   //Ej: Recibe ---> ["You", "are", "beautiful", "looking"] || Devuelve ---> [“You", "are", "looking", "beautiful"]
   //Escribe tu código aquí
+  let matrizCreciente = []
+  n = arr[0].length
+  for(i = 1; i < arr.length; i++) {
+    if (arr[i].length < n) {
+      n = arr[i].length
+    }
+  }
+  while (matrizCreciente.length < arr.length) {
+    for(i = 0; i < arr.length; i++) {
+      if (arr[i].length == n) {
+        matrizCreciente.push(arr[i])
+      }
+    }
+    n = n + 1
+  }
+  return matrizCreciente
 }
 
 
