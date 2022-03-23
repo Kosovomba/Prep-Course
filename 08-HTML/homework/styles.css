@@ -1,0 +1,25 @@
+    img {
+        width: 400px;
+    }
+    #thirdDiv {
+        height: 600px;
+        width: 500px;
+        color: greenyellow;
+        padding: 50px;
+        border: 7px solid greenyellow;
+        background-color: rgba(0, 0, 0, 0.829);
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #spanId {
+        font-size: 18px;
+        margin: 50px;
+    }
+    .divClass {
+        width: 290px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    body {
+        background-image: url(https://media.istockphoto.com/photos/hamburger-with-french-fries-on-white-picture-id1206323372);
+    }
